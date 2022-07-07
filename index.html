@@ -16,41 +16,71 @@
     </head>
 
     <body>
-        <header class="header">
+        <header class="header" id="header">
             <nav class="header__navig">
                 <a href="#"><div class="header__card">Home</div></a>
-                <a href="#"><div class="header__card">Portfolio</div></a>
-                <a href="#"><div class="header__card">Experience</div></a>
-                <a href="#"><div class="header__card">Contact</div></a>
+                <a href="#portfolio"
+                    ><div class="header__card">Portfolio</div></a
+                >
+                <a href="#experience"
+                    ><div class="header__card">Experience</div></a
+                >
+                <a href="#contact"><div class="header__card">Contact</div></a>
             </nav>
             <div class="header__titleBox">
                 <h1 class="header__titleBox--title">Sophie Hogg</h1>
-                <div class="header__titleBox--image"></div>
+                <div class="header__titleBox--image">
+                    <img
+                        class="header__titleBox--image--img"
+                        src="me-in-rome.png"
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div class="header__header--links">
+                <a href="#titlescreen">▼</a>
             </div>
         </header>
         <main>
-            <div class="main main__titlescreen">
+            <div class="main main__titlescreen" id="titlescreen">
                 <h2 class="main__subtitle main__titlescreen--subtitle">
-                    Welcome
+                    Hi! My name is Sophie Hogg.
                 </h2>
                 <div class="main__titlescreen--para">
-                    <p>Welcome to my page.</p>
+                    <p>
+                        I'm a junior software developer, specialising in
+                        front-end web development with JavaScript, HTML and CSS.
+                    </p>
+                    <p></p>
+                </div>
+                <div class="main__titlescreen--links">
+                    <a class="top-page-link" href="#header">▲</a>
+                    <a href="#portfolio">▼</a>
                 </div>
             </div>
-            <div class="main main__portfolio">
+            <div class="main main__portfolio" id="portfolio">
                 <h2 class="main__subtitle main__portfolio--subtitle">
                     Portfolio
                 </h2>
                 <div class="main__portfolio--flex">
                     <div class="main__portfolio--para">
+                        <img
+                            class="main__portfolio--img"
+                            src="calculator.png"
+                            alt=""
+                        />
                         <p>Calculator</p>
                     </div>
                     <div class="main__portfolio--para">
                         <p>Project 2</p>
                     </div>
                 </div>
+                <div class="main__portfolio--links">
+                    <a class="top-page-link" href="#header">▲</a>
+                    <a href="#experience">▼</a>
+                </div>
             </div>
-            <div class="main main__experience">
+            <div class="main main__experience" id="experience">
                 <h2 class="main__subtitle main__experience--subtitle">
                     My Experience
                 </h2>
@@ -67,8 +97,12 @@
                         </li>
                     </ul>
                 </div>
+                <div class="main__experience--links">
+                    <a class="top-page-link" href="#header">▲</a>
+                    <a href="#contact">▼</a>
+                </div>
             </div>
-            <div class="main main__contact">
+            <div class="main main__contact" id="contact">
                 <h2 class="main__subtitle main__contact--subtitle">
                     Contact Me
                 </h2>
@@ -79,6 +113,9 @@
                     </p>
                     <p>Email: sophiehogg10@gmail.com</p>
                     <p>Phone: +61 405 667 880</p>
+                </div>
+                <div class="main__contact--links">
+                    <a class="top-page-link" href="#header">▲</a>
                 </div>
             </div>
         </main>

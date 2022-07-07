@@ -1,6 +1,12 @@
 @use "./partials/palette";
+@use "./partials/devices";
+@use "./partials/mixins";
 * {
     font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
 }
 .header {
     text-align: center;
@@ -9,6 +15,13 @@
     display: flex;
     flex-direction: column;
     background-color: palette.$primary-colour;
+    &__header {
+        @include mixins.toppage;
+        &--links {
+            padding-bottom: 20px;
+            margin-top: 0px;
+        }
+    }
     &__navig {
         display: flex;
         justify-content: center;
@@ -26,21 +39,52 @@
         padding: 10px;
     }
     &__titleBox {
-        justify-content: left;
+        display: flex;
         height: 100vh;
-        width: 50vw;
+        width: 100vw;
         align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
         &--title {
+            width: 40vw;
             color: palette.$title-colour;
             font-size: 100px;
             margin-left: 5vw;
-            text-align: left;
-            margin-top: 40vh;
+            text-align: right;
             font-family: "Titan One", cursive;
+            @include devices.phone-s {
+                font-size: 60px;
+            }
         }
         &--image {
-            width: 50vw;
-            background-image: url(home-side-photo.png);
+            display: flex;
+            @include devices.tablet-ls {
+                height: 30vh;
+                width: 30vh;
+            }
+            @include devices.laptop {
+                height: 50vh;
+                width: 50vh;
+            }
+            @include devices.desktop {
+                height: 60vh;
+                width: 60vh;
+            }
+            &--img {
+                width: 40vh;
+                height: 40vh;
+                @include devices.small-width {
+                    height: 0px;
+                }
+                @include devices.laptop {
+                    height: 50vh;
+                    width: 50vh;
+                }
+                @include devices.desktop {
+                    height: 60vh;
+                    width: 60vh;
+                }
+            }
         }
     }
 }
@@ -48,20 +92,35 @@
     @extend .header;
     &__subtitle {
         color: palette.$subtitle-colour;
+        margin-top: 50px;
     }
     &__titlescreen {
         background-color: palette.$secondary-colour;
+        @include mixins.maindiv;
+        @include mixins.toppage;
     }
     &__portfolio {
         background-color: palette.$primary-colour;
+        @include mixins.toppage;
         &--flex {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
         }
+        &--img {
+            width: 100px;
+            height: 100px;
+        }
     }
     &__experience {
         background-color: palette.$secondary-colour;
+        @include mixins.maindiv;
+        @include mixins.toppage;
+    }
+    &__contact {
+        background-color: palette.$primary-colour;
+        @include mixins.maindiv;
+        @include mixins.toppage;
     }
 }
 
