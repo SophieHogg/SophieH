@@ -1,3 +1,5 @@
+@use "./devices";
+
 @mixin maindiv {
     display: flex;
     align-items: center;
@@ -8,11 +10,19 @@
 
 @mixin toppage {
     &--links {
-        margin-top: 30vh;
         width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: flex-end;
         font-size: 40px;
+    }
+}
+
+@mixin fontsize {
+    @include devices.phone-s {
+        font-size: 12px;
+    }
+    @include devices.phone {
+        font-size: 14px;
     }
 }
